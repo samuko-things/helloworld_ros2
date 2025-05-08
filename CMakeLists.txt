@@ -12,7 +12,7 @@ find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 
-include_directories(include)
+# include_directories(include)
 
 add_executable(talker src/talker.cpp)
 ament_target_dependencies(talker rclcpp std_msgs)
@@ -26,10 +26,10 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(
-  DIRECTORY include
-  DESTINATION include
-)
+# install(
+#   DIRECTORY include
+#   DESTINATION include
+# )
 
 ament_python_install_package(${PROJECT_NAME})
 
